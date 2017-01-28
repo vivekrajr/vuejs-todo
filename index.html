@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <div id="root">
+        <h3>Tasks</h3>
+
+        <ul>
+            <li v-for="todo in pendingTasks">{{todo.text}} <input type="checkbox" v-model="todo.completed"></li>
+        </ul>
+
+        <h3>Completed Tasks</h3>
+
+        <ul>
+            <li v-for="todo in completedTasks">{{todo.text}} <input type="checkbox" v-model="todo.completed"></li>
+        </ul>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
