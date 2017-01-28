@@ -14,13 +14,13 @@
         <input type="text" v-model="newTodoText"><button @click="addTodo">Add Todo</button>
 
 
-        <h3>Tasks</h3>
+        <h3 v-if="pendingTasks.length > 0">Tasks</h3>
 
         <ul>
             <li v-for="todo in pendingTasks">{{todo.text}} <input type="checkbox" v-model="todo.completed"></li>
         </ul>
 
-        <h3>Completed Tasks</h3>
+        <h3 v-if="completedTasks.length > 0">Completed Tasks</h3>
 
         <ul>
             <li v-for="todo in completedTasks">{{todo.text}} <input type="checkbox" v-model="todo.completed"></li>
